@@ -71,3 +71,39 @@
     height: 90px;
 }
 /* #endregion general  */
+
+
+
+
+/************************* RESPONSIVE **************************/
+
+/* responsive md (tablet 878px ) */
+@media screen and (max-width:878px){
+
+}
+
+
+
+/* responsive s (tablet-small 641px ) */
+@media screen and (max-width:641px){
+
+}
+
+/* responsive xs (mobile 552px ) */
+@media screen and (max-width:552px){
+    .top{
+        .top-left{
+            width: 50px;
+            height: 100%;
+        }
+        .top-rigth{
+            width: calc(100% - 50px);
+
+        }
+    }
+}
+
+/* responsive heigth 350px (widget ) */
+@media screen and (max-height:350px){
+
+}

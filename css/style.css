@@ -94,6 +94,13 @@ a{
 /* spotify logo  */
 .aside-logo{
     padding: 1.5rem 0;
+    .logo-full{
+        display: block;
+    }
+    /* logo for mobile responsive */
+    .logo-small{
+        display: none;
+    }
     img{
         width: 80%;
     }
@@ -176,28 +183,102 @@ a{
 
 /* responsive md (tablet 878px ) */
 @media screen and (max-width:878px){
-
+/* aside already responsive */
 }
 
 
 
 /* responsive s (tablet-small 641px ) */
 @media screen and (max-width:641px){
+/* aside already responsive */
+
 
 }
 
 /* responsive xs (mobile 552px ) */
 @media screen and (max-width:552px){
     .top{
+        /* aside div  */
         .top-left{
             width: 50px;
             height: 100%;
+            padding: 0 0;
+            align-items: center;
+            /* remove hr in aside  */
+            hr{
+                display: none;
+            }
+            /* resize aside img  */
+            a{
+                img{
+                    max-width: 30px;
+                }
+                color: var(--spo-text-primary-color);
+            }
         }
         .top-rigth{
             width: calc(100% - 50px);
 
         }
     }
+    /* #region aside  */
+    .aside-logo{
+        padding: 0.5rem 0;
+        .logo-full{
+            display: none;
+        }
+        /* logo for mobile responsive */
+        .logo-small{
+            display: block;
+        }
+        img{
+            width: 35px;
+        }
+    }
+    /* aside navigation  */
+    .aside-navigation{
+        span{
+            display: none;
+        }
+        a{
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    /* playlist */
+    .playlist{
+        display: none;
+    }
+    /* cta-install */
+    .cta-install{
+        span{
+            display: none;
+        }
+        a{
+            img{
+                transform: translate(-5%, 0);
+                width: 15px;
+            }
+            color: var(--spo-text-primary-color);
+        }
+    }
+    /* profile */
+    .profile{
+        span{
+            display: none;
+        }
+        a{
+            img{
+                width: 30px;
+                height: 30px;
+
+            }
+        }
+    }
+    /* #endregion aside  */
+
 }
 
 /* responsive heigth 350px (widget ) */
@@ -206,6 +287,7 @@ a{
         .top-left{
             width: 90px;
             height: 100%;
+
         }
         .top-rigth{
             width: calc(100% - 90px);

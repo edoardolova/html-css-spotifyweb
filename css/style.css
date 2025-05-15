@@ -3,3 +3,71 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --spo-top-header-bg:#080b1254;
+    --spo-top-main-bg:#141922;
+    --spo-top-aside-bg:#000000;
+    --spo-player-bg:#282828;
+
+}
+/* utils  */
+.d-flex{
+    display: flex;
+}
+
+.debug{
+    .top{
+        .top-left{
+            background-color: var(--spo-top-aside-bg);
+        }
+        .top-rigth{
+                background-color: var(--spo-top-main-bg);
+            color: rgb(151, 151, 151);
+
+            .top-header{
+                background-color: var(--spo-top-header-bg);
+            }
+            .top-main{
+                background-color: var(--spo-top-main-bg);
+            }
+        }
+    }
+    .bottom{
+        height: 70px;
+        background-color: var(--spo-player-bg);
+    }
+}
+
+/* #region general  */
+.wrapper{
+    height: 100vh;
+    overflow: hidden;
+}
+.top{
+    height: calc(100% - 70px);
+    .top-left{
+        width: 230px;
+        height: 100%;
+    }
+    .top-rigth{
+        height: 100%;
+        width: calc(100% - 230px);
+        overflow-y: auto ;
+
+        .top-header{
+            width: 100%;
+            height: 90px;
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+        .top-main{
+            width: 100%;
+        }
+    }
+}
+.bottom{
+    height: 90px;
+}
+/* #endregion general  */

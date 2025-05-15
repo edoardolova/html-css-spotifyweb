@@ -34,7 +34,6 @@
         }
     }
     .bottom{
-        height: 70px;
         background-color: var(--spo-player-bg);
     }
 }
@@ -105,5 +104,14 @@
 
 /* responsive heigth 350px (widget ) */
 @media screen and (max-height:350px){
+    .top{
+        .top-left{
+            width: 90px;
+            height: 100%;
+        }
+        .top-rigth{
+            width: calc(100% - 90px);
 
+        }
+    }
 }

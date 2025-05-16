@@ -253,7 +253,17 @@ a{
 /* responsive md (tablet 878px ) */
 @media screen and (max-width:878px){
 /* aside already responsive */
+
 /* header btn already responsive */
+
+/* top main  */
+.top-main{
+    /* links list  */
+    .nav-link{
+        width: 85%;
+    }
+}
+
 }
 
 
@@ -261,7 +271,16 @@ a{
 /* responsive s (tablet-small 641px ) */
 @media screen and (max-width:641px){
 /* aside already responsive */
+
 /* header btn already responsive */
+
+/* top main  */
+.top-main{
+    /* links list  */
+    .nav-link{
+        width: 90%;
+    }
+}
 
 
 }
@@ -350,6 +369,13 @@ a{
     }
     /* #endregion aside  */
 
+    /* top main  */
+    .top-main{
+        /* links list  */
+        .nav-link{
+            width: 95%;
+        }
+    }
 }
 
 /* responsive heigth 350px (widget ) */
@@ -366,4 +392,5 @@ a{
 
         }
     }
+
 }

@@ -84,8 +84,9 @@ a{
         padding: 0.4rem 0;
         font-size: 0.8rem;
         font-weight: 600;
-        img{
+        svg{
             max-width: 12%;
+            fill: var(--spo-text-primary-color);
         }
         color: var(--spo-text-primary-color);
     }
@@ -231,12 +232,11 @@ a{
             hr{
                 display: none;
             }
-            /* resize aside img  */
+            /* resize aside svg  */
             a{
-                img{
+                svg{
                     max-width: 30px;
                 }
-                color: var(--spo-text-primary-color);
             }
         }
         .top-rigth{
@@ -265,7 +265,7 @@ a{
             display: none;
         }
         a{
-            img{
+            svg{
                 width: 30px;
                 height: 30px;
             }
@@ -281,11 +281,10 @@ a{
             display: none;
         }
         a{
-            img{
+            svg{
                 transform: translate(-5%, 0);
                 width: 15px;
             }
-            color: var(--spo-text-primary-color);
         }
     }
     /* profile */

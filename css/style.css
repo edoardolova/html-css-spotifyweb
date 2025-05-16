@@ -407,6 +407,73 @@ a{
     left: 0;
     z-index: 1000;
 
+    .container{
+        padding: 1rem;
+    }
+    .player-left{
+        align-items: center;
+        
+        color: var(--spo-text-primary-color);
+        img{
+            width: 40px;
+            height: 40px;
+        }
+
+        .title{
+            padding-left: 0.5rem;
+            
+            h4{
+                color: white;
+                font-size: 0.8rem;
+            }
+            p{
+                font-size: 0.7rem;
+                font-weight: 600;
+            }
+        }
+
+        .left-icons{
+            margin-left: auto;
+            i{
+                cursor: pointer;
+                padding: 0 0.3rem;
+            }
+        }
+    }
+
+    .player-middle{
+        color: white;
+        .controls{
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            i{
+                font-size: 1rem;
+                cursor: pointer;
+            }
+            .fa-circle-play{
+                font-size: 2rem;
+                padding: 0 0.5rem;
+            }
+        }
+        .track-progress{
+            justify-content: center;
+            gap: 1rem;
+
+            p{
+                font-size: 0.8rem;
+            }
+            .slide-container{
+                width: 50%;
+                .slider{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
 }
 
 

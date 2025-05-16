@@ -337,8 +337,25 @@ a{
             font-size: 0.8rem;
             font-weight: 600;
             color: var(--spo-text-primary-color);
-            padding-bottom: 1rem;
+            padding-bottom: 2rem;
 
+        }
+    }
+
+    /* popular */
+    .popular{
+        h2{
+            padding-bottom: 0.5rem;
+        }
+        .subtitle{
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--spo-text-primary-color);
+            padding-bottom: 2rem;
+
+        }
+        img{
+            border-radius: 50%;
         }
     }
 }
@@ -439,11 +456,7 @@ a{
         .nav-link{
             width: 90%;
         }
-        /* main card  */
-
-
-
-        
+        /* main card  */  
     }
 
     /* #region columns-sm */
@@ -579,6 +592,13 @@ a{
         /* links list  */
         .nav-link{
             width: 95%;
+        }
+        /* main card  */
+        .card{
+            .subtitle{
+                font-size: 0.7rem;
+                font-weight: 700;
+            }
         }
     }
 }

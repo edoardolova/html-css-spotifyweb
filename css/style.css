@@ -311,9 +311,38 @@ a{
     .card{
         text-align: center;
         height: 100%;
-        img{
-            max-width: 100%;
-            object-fit: contain;
+        .card-img{
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            img{
+                max-width: 100%;
+                object-fit: contain;
+            }
+            /* overlay effect not visible  */
+            .img-hover{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                background-color: #00000069;
+                i{
+                    color: white;
+                    font-size: 3rem;
+                }
+            }
+            /* card-img hover show overlay  */
+            &:hover{
+                cursor: pointer;
+                .img-hover{
+                    display: flex;
+                }
+            }
         }
         h3{
             font-size: 1rem;
@@ -327,6 +356,7 @@ a{
 
         }
     }
+
 
     /* recommentation  */
     .recommendations{
@@ -353,6 +383,11 @@ a{
             color: var(--spo-text-primary-color);
             padding-bottom: 2rem;
 
+        }
+        .card-img{
+            .img-hover{
+                border-radius: 50%;
+            }
         }
         img{
             border-radius: 50%;

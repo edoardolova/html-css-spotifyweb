@@ -327,6 +327,20 @@ a{
 
         }
     }
+
+    /* recommentation  */
+    .recommendations{
+        h2{
+            padding-bottom: 0.5rem;
+        }
+        .subtitle{
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--spo-text-primary-color);
+            padding-bottom: 1rem;
+
+        }
+    }
 }
 /* #endregion top rigth  */
 

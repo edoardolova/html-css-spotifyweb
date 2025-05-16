@@ -156,7 +156,7 @@ a{
 /*#region top left  */
 
 
-/* top rigth  */
+/* #region top rigth  */
 .top-rigth{
     background-color: var(--spo-top-main-bg);
     height: 100%;
@@ -195,7 +195,42 @@ a{
 }
 .top-main{
     width: 100%;
+    padding: 1rem;
+    /* links list  */
+    .nav-link{
+        width: 80%;
+        margin: auto;
+        ul{
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            a{
+                position: relative;
+                color: var(--spo-text-primary-color);
+                font-size: 0.7rem;
+                font-weight: 600;
+                /* hover white  */
+                &:hover{
+                    color: white;
+                }
+            }
+            /* underline on active link  */
+            .active::after{
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -4px;
+                transform: translateX(-50%);
+                width: 40%; 
+                height: 3px;
+                background-color: #adff2f; 
+                border-radius: 2px;
+            }
+        }
+    }
 }
+/* #endregion top rigth  */
+
 
 /* #endregion top  */
 

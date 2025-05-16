@@ -89,7 +89,14 @@ a{
             fill: var(--spo-text-primary-color);
         }
         color: var(--spo-text-primary-color);
-    }
+        /* hover white for aside link and svg */
+        &:hover{
+            svg{
+                fill: white;
+            }
+            color: white;
+        }
+    }   
 }
 
 /* spotify logo  */
@@ -120,6 +127,11 @@ a{
         background-color: #a3a3a3; 
         color: black;
         padding: 8px;
+    }
+    .create-playlist:hover{
+        i{
+            background-color: white;
+        }
     }
 }
 
@@ -237,6 +249,7 @@ a{
                 svg{
                     max-width: 30px;
                 }
+                
             }
         }
         .top-rigth{

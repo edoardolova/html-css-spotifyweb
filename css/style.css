@@ -252,6 +252,8 @@ a{
     display: flex;
     align-items: center;
     justify-content: end;
+    z-index: 1000;
+
 
     .btn{
         display: flex;
@@ -412,6 +414,7 @@ a{
     }
     .player-left{
         align-items: center;
+        height: 100%;
         
         color: var(--spo-text-primary-color);
         img{
@@ -436,7 +439,11 @@ a{
             margin-left: auto;
             i{
                 cursor: pointer;
-                padding: 0 0.3rem;
+                padding: 0.3rem;
+
+                &:hover{
+                    color: white;
+                }
             }
         }
     }
@@ -454,21 +461,98 @@ a{
             }
             .fa-circle-play{
                 font-size: 2rem;
-                padding: 0 0.5rem;
+                padding: 0 1rem;
+                &:hover{
+                    scale: 1.1;
+                }
             }
         }
         .track-progress{
             justify-content: center;
+            align-items: end;
             gap: 1rem;
 
             p{
-                font-size: 0.8rem;
+                font-size: 0.5rem;
+            }
+
+            input[type="range"] {
+                accent-color : red;
             }
             .slide-container{
-                width: 50%;
-                .slider{
-                    width: 100%;
+                /* The slider itself */
+                .slider {
+                    -webkit-appearance: none;  /* Override default CSS styles */
+                    appearance: none;
+                    width: 400px; /* Full-width */
+                    height: 5px; /* Specified height */
+                    border-radius: 3px;
+                    background: #c6c6c6; /* Grey background */
+                    outline: none; /* Remove outline */
                 }
+                /* Mouse-over effects */
+                .slider:hover {
+                }
+                /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+                .slider::-webkit-slider-thumb {
+                    -webkit-appearance: none; /* Override default look */
+                    appearance: none;
+                    width: 12px; /* Set a specific slider handle width */
+                    height: 12px; /* Slider handle height */
+                    background: #ffffff; /* Green background */
+                    cursor: pointer; /* Cursor on hover */
+                }
+                .slider::-moz-range-thumb {
+                    width: 12px; /* Set a specific slider handle width */
+                    height: 12px; /* Slider handle height */
+                    background: #ffffff; /* Green background */
+                    cursor: pointer; /* Cursor on hover */
+                }
+            }
+        }
+    }
+
+    .player-right{
+        .row{
+            justify-content: space-between;
+        }
+        height: 100%;
+        justify-content: end;
+        align-items: center;
+        gap: 0.7rem;
+        color: white;
+        i{
+            cursor: pointer;
+        }
+        .slide-container {
+        
+
+            .slider {
+                -webkit-appearance: none;  /* Override default CSS styles */
+                appearance: none;
+                width: 120px; /* Full-width */
+                height: 5px; /* Specified height */
+                border-radius: 3px;
+                background: #c6c6c6; /* Grey background */
+                outline: none; /* Remove outline */
+            }
+            /* Mouse-over effects */
+            .slider:hover {
+            }
+            /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none; /* Override default look */
+                appearance: none;
+                width: 12px; /* Set a specific slider handle width */
+                height: 12px; /* Slider handle height */
+                background: #ffffff; /* Green background */
+                cursor: pointer; /* Cursor on hover */
+            }
+            .slider::-moz-range-thumb {
+                width: 12px; /* Set a specific slider handle width */
+                height: 12px; /* Slider handle height */
+                background: #ffffff; /* Green background */
+                cursor: pointer; /* Cursor on hover */
             }
         }
     }
@@ -482,7 +566,7 @@ a{
 /************************* RESPONSIVE **************************/
 
 /* responsive md (tablet 878px ) */
-@media screen and (max-width:879px){
+@media screen and (max-width:878px){
     /* aside already responsive */
 
     /* header btn already responsive */
@@ -498,6 +582,20 @@ a{
             .subtitle{
                 font-weight: 700;
             }
+        }
+    }
+
+    /* bottom  */
+    .bottom {
+        & .player-middle {
+            & .track-progress {
+                & .slide-container {
+                    .slider{
+                        width: 220px;
+                    }
+                }
+            }
+
         }
     }
 
@@ -561,6 +659,32 @@ a{
         /* main card  */  
     }
 
+    /* bottom  */
+    /* bottom  */
+    .bottom {
+        & .player-middle {
+            & .track-progress {
+                & .slide-container {
+                    .slider{
+                        width: 150px;
+                    }
+                }
+            }
+
+        }
+    }
+    .player-left{
+        .left-icons{
+            flex-direction: column;
+            margin-left: auto;
+            i{
+                cursor: pointer;
+                padding: 0 0.3rem;
+            }
+        }
+    }
+
+
     /* #region columns-sm */
     .col-sm-1{
         width: calc(100% / 12 * 2);
@@ -606,7 +730,7 @@ a{
 }
 
 /* responsive xs (mobile 552px ) */
-@media screen and (max-width:552px){
+@media screen and (max-width:552px) and (min-height:351px){
     .top{
         /* aside div  */
         .top-left{
@@ -703,6 +827,160 @@ a{
             }
         }
     }
+
+    /* bottom  */
+    .bottom{
+        .player-middle{
+            color: white;
+            .controls{
+                justify-content: center;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.7rem 0;
+                i{
+                    font-size: 0.9rem;
+                    cursor: pointer;
+                }
+                .fa-circle-play{
+                    font-size: 1.5rem;
+                    padding: 0 0.5rem;
+                    &:hover{
+                        scale: 1.1;
+                    }
+                }
+            }
+            .track-progress{
+                justify-content: center;
+                align-items: end;
+                gap: 0.2rem;
+    
+                p{
+                    font-size: 0.5rem;
+                }
+    
+                input[type="range"] {
+                    accent-color : red;
+                }
+                .slide-container{
+                    /* The slider itself */
+                    .slider {
+                        -webkit-appearance: none;  /* Override default CSS styles */
+                        appearance: none;
+                        width: 130px; /* Full-width */
+                        height: 5px; /* Specified height */
+                        border-radius: 3px;
+                        background: #c6c6c6; /* Grey background */
+                        outline: none; /* Remove outline */
+                    }
+                    /* Mouse-over effects */
+                    .slider:hover {
+                    }
+                    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+                    .slider::-webkit-slider-thumb {
+                        -webkit-appearance: none; /* Override default look */
+                        appearance: none;
+                        width: 12px; /* Set a specific slider handle width */
+                        height: 12px; /* Slider handle height */
+                        background: #ffffff; /* Green background */
+                        cursor: pointer; /* Cursor on hover */
+                    }
+                    .slider::-moz-range-thumb {
+                        width: 12px; /* Set a specific slider handle width */
+                        height: 12px; /* Slider handle height */
+                        background: #ffffff; /* Green background */
+                        cursor: pointer; /* Cursor on hover */
+                    }
+    
+                }
+            }
+        }
+        
+        .player-right{
+                .row{
+                    justify-content: space-between;
+                }
+                height: 100%;
+                justify-content: end;
+                align-items: center;
+                gap: 0.3rem;
+                color: white;
+                i{
+                    cursor: pointer;
+                    font-size: 0.9rem;
+                }
+                .slide-container {
+                 /* Width of the outside container */
+                
+        
+                    .slider {
+                        -webkit-appearance: none;  /* Override default CSS styles */
+                        appearance: none;
+                        width: 80px; /* Full-width */
+                        height: 5px; /* Specified height */
+                        border-radius: 3px;
+                        background: #c6c6c6; /* Grey background */
+                        outline: none; /* Remove outline */
+                    }
+                    /* Mouse-over effects */
+                    .slider:hover {
+                    }
+                    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+                    .slider::-webkit-slider-thumb {
+                        -webkit-appearance: none; /* Override default look */
+                        appearance: none;
+                        width: 12px; /* Set a specific slider handle width */
+                        height: 12px; /* Slider handle height */
+                        background: #ffffff; /* Green background */
+                        cursor: pointer; /* Cursor on hover */
+                    }
+                    .slider::-moz-range-thumb {
+                        width: 12px; /* Set a specific slider handle width */
+                        height: 12px; /* Slider handle height */
+                        background: #ffffff; /* Green background */
+                        cursor: pointer; /* Cursor on hover */
+                    }
+                }
+        }
+
+    }
+    /* #region columns-sm */
+    .col-xs-1{
+        width: calc(100% / 12 * 2);
+    }
+    .col-xs-2{
+        width: calc(100% / 12 * 2);
+    }
+    .col-xs-3{
+        width: calc(100% / 12 * 3);
+    }
+    .col-xs-4{
+        width: calc(100% / 12 * 4);
+    }
+    .col-xs-5{
+        width: calc(100% / 12 * 5);
+    }
+    .col-xs-6{
+        width: 50%;
+    }
+    .col-xs-7{
+        width: calc(100% / 12 * 7);
+    }
+    .col-xs-8{
+        width: calc(100% / 12 * 8);
+    }
+    .col-xs-9{
+        width: calc(100% / 12 * 9);
+    }
+    .col-xs-10{
+        width: calc(100% / 12 * 10);
+    }
+    .col-xs-11{
+        width: calc(100% / 12 * 11);
+    }
+    .col-xs-12{
+        width: 100%;
+    }
+    /* #endregion columns */
 }
 
 /* responsive heigth 350px (widget ) */

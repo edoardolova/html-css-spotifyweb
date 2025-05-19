@@ -178,3 +178,34 @@
 .fas.fa-ellipsis {
     cursor: pointer;
 }
+
+/************************* RESPONSIVE **************************/
+@media screen and (max-width:878px){
+    .song-container{
+        width: 100%;
+        color: white;
+        .song-info{
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .song-img{
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+        }
+        .song-specific{
+
+            text-align: center;
+            h3{
+                display: none;
+            }
+            h2{
+                padding-bottom: 0.8rem;
+            }
+            div:last-of-type{
+                justify-content: center;
+            }
+        }
+    }
+}

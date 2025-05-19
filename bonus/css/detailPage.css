@@ -180,6 +180,7 @@
 }
 
 /************************* RESPONSIVE **************************/
+/* md res  */
 @media screen and (max-width:878px){
     .song-container{
         width: 100%;
@@ -208,4 +209,12 @@
             }
         }
     }
+}
+
+/* s res  */
+@media screen and (max-width:641px){
+    .visualization{
+        display: none;
+    }
+
 }

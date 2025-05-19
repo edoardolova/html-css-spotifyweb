@@ -28,6 +28,8 @@ body{
     margin: 0 -0.5rem;
     row-gap: 1rem;
 }
+
+
 /* #region columns */
 [class^="col"]{
     padding: 0 0.5rem;

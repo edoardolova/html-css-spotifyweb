@@ -468,40 +468,44 @@ a{
             gap: 1rem;
 
             p{
-                font-size: 0.5rem;
-            }
-
-            input[type="range"] {
-                accent-color : red;
+                font-size: 0.6rem;
+                font-weight: 600;
             }
             .slide-container{
-                /* The slider itself */
-                .slider {
-                    -webkit-appearance: none;  /* Override default CSS styles */
-                    appearance: none;
-                    width: 400px; /* Full-width */
-                    height: 5px; /* Specified height */
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 400px;
+                height: 6px;
+                border-radius: 3px;
+                background-color: var(--spo-text-primary-color);
+                /* time progression  */
+                .progress-filled{
+                    height: 100%;
+                    background-color: white;
+                    width: 90px;
                     border-radius: 3px;
-                    background: #c6c6c6; /* Grey background */
-                    outline: none; /* Remove outline */
                 }
-                /* Mouse-over effects */
-                .slider:hover {
+                .progress-thumb{
+                    display: none;
+                    position: absolute;
+                    top: 50%;
+                    left: 22%;
+                    width: 14px;
+                    height: 14px;
+                    background-color: white;
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%);
+                    cursor: pointer;
                 }
-                /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-                .slider::-webkit-slider-thumb {
-                    -webkit-appearance: none; /* Override default look */
-                    appearance: none;
-                    width: 12px; /* Set a specific slider handle width */
-                    height: 12px; /* Slider handle height */
-                    background: #ffffff; /* Green background */
-                    cursor: pointer; /* Cursor on hover */
-                }
-                .slider::-moz-range-thumb {
-                    width: 12px; /* Set a specific slider handle width */
-                    height: 12px; /* Slider handle height */
-                    background: #ffffff; /* Green background */
-                    cursor: pointer; /* Cursor on hover */
+                &:hover{
+                    cursor: pointer;
+                    .progress-filled{
+                        background-color: #adff2f;
+                    }
+                    .progress-thumb{
+                        display: block;
+                    }
                 }
             }
         }
@@ -520,35 +524,7 @@ a{
             cursor: pointer;
         }
         .slide-container {
-        
 
-            .slider {
-                -webkit-appearance: none;  /* Override default CSS styles */
-                appearance: none;
-                width: 120px; /* Full-width */
-                height: 5px; /* Specified height */
-                border-radius: 3px;
-                background: #c6c6c6; /* Grey background */
-                outline: none; /* Remove outline */
-            }
-            /* Mouse-over effects */
-            .slider:hover {
-            }
-            /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-            .slider::-webkit-slider-thumb {
-                -webkit-appearance: none; /* Override default look */
-                appearance: none;
-                width: 12px; /* Set a specific slider handle width */
-                height: 12px; /* Slider handle height */
-                background: #ffffff; /* Green background */
-                cursor: pointer; /* Cursor on hover */
-            }
-            .slider::-moz-range-thumb {
-                width: 12px; /* Set a specific slider handle width */
-                height: 12px; /* Slider handle height */
-                background: #ffffff; /* Green background */
-                cursor: pointer; /* Cursor on hover */
-            }
         }
     }
 
@@ -582,15 +558,23 @@ a{
 
     /* bottom  */
     .bottom {
-        & .player-middle {
-            & .track-progress {
-                & .slide-container {
-                    .slider{
-                        width: 220px;
+        .player-middle{
+            .track-progress{
+                .slide-container{
+                    width: 220px;
+                    /* time progression  */
+                    .progress-filled{
+                        height: 100%;
+                        background-color: white;
+                        width: 40px;
+                        border-radius: 3px;
+                    }
+                    .progress-thumb{
+                        top: 50%;
+                        left: 18%;
                     }
                 }
             }
-
         }
     }
 
@@ -655,17 +639,16 @@ a{
     }
 
     /* bottom  */
-    /* bottom  */
     .bottom {
-        & .player-middle {
-            & .track-progress {
-                & .slide-container {
-                    .slider{
-                        width: 150px;
+        .player-middle{
+            .track-progress{
+                .slide-container{
+                    width: 140px;
+                    .progress-thumb{
+                        left: 28%;
                     }
                 }
             }
-
         }
     }
     .player-left{
@@ -824,72 +807,22 @@ a{
     }
 
     /* bottom  */
-    .bottom{
+    .bottom {
         .player-middle{
-            color: white;
-            .controls{
-                justify-content: center;
-                align-items: center;
-                gap: 0.5rem;
-                padding: 0.7rem 0;
-                i{
-                    font-size: 0.9rem;
-                    cursor: pointer;
-                }
-                .fa-circle-play{
-                    font-size: 1.5rem;
-                    padding: 0 0.5rem;
-                    &:hover{
-                        scale: 1.1;
-                    }
-                }
-            }
             .track-progress{
-                justify-content: center;
-                align-items: end;
-                gap: 0.2rem;
-    
-                p{
-                    font-size: 0.5rem;
-                }
-    
-                input[type="range"] {
-                    accent-color : red;
-                }
                 .slide-container{
-                    /* The slider itself */
-                    .slider {
-                        -webkit-appearance: none;  /* Override default CSS styles */
-                        appearance: none;
-                        width: 130px; /* Full-width */
-                        height: 5px; /* Specified height */
-                        border-radius: 3px;
-                        background: #c6c6c6; /* Grey background */
-                        outline: none; /* Remove outline */
+                    width: 130px;
+                    .progress-filled{
+                        width: 25px;
                     }
-                    /* Mouse-over effects */
-                    .slider:hover {
+                    .progress-thumb{
+                        left: 30%;
                     }
-                    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-                    .slider::-webkit-slider-thumb {
-                        -webkit-appearance: none; /* Override default look */
-                        appearance: none;
-                        width: 12px; /* Set a specific slider handle width */
-                        height: 12px; /* Slider handle height */
-                        background: #ffffff; /* Green background */
-                        cursor: pointer; /* Cursor on hover */
-                    }
-                    .slider::-moz-range-thumb {
-                        width: 12px; /* Set a specific slider handle width */
-                        height: 12px; /* Slider handle height */
-                        background: #ffffff; /* Green background */
-                        cursor: pointer; /* Cursor on hover */
-                    }
-    
                 }
             }
         }
-        
+    }
+    .bottom{
         .player-right{
                 .row{
                     justify-content: space-between;
@@ -903,38 +836,7 @@ a{
                     cursor: pointer;
                     font-size: 0.9rem;
                 }
-                .slide-container {
-                 /* Width of the outside container */
-                
-        
-                    .slider {
-                        -webkit-appearance: none;  /* Override default CSS styles */
-                        appearance: none;
-                        width: 80px; /* Full-width */
-                        height: 5px; /* Specified height */
-                        border-radius: 3px;
-                        background: #c6c6c6; /* Grey background */
-                        outline: none; /* Remove outline */
-                    }
-                    /* Mouse-over effects */
-                    .slider:hover {
-                    }
-                    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-                    .slider::-webkit-slider-thumb {
-                        -webkit-appearance: none; /* Override default look */
-                        appearance: none;
-                        width: 12px; /* Set a specific slider handle width */
-                        height: 12px; /* Slider handle height */
-                        background: #ffffff; /* Green background */
-                        cursor: pointer; /* Cursor on hover */
-                    }
-                    .slider::-moz-range-thumb {
-                        width: 12px; /* Set a specific slider handle width */
-                        height: 12px; /* Slider handle height */
-                        background: #ffffff; /* Green background */
-                        cursor: pointer; /* Cursor on hover */
-                    }
-                }
+
         }
 
     }

@@ -395,7 +395,7 @@ a{
 
 /* #endregion top  */
 
-
+/* #region bottom  */
 .bottom{
     background-color: var(--spo-player-bg);
     height: 90px;
@@ -427,6 +427,11 @@ a{
             p{
                 font-size: 0.7rem;
                 font-weight: 600;
+                &:hover{
+                    cursor: pointer;
+                    color: white;
+                    text-decoration: underline;
+                }
             }
         }
 
@@ -564,6 +569,9 @@ a{
 
 
 }
+
+/* #endregion bottom  */
+
 
 
 
